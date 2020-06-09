@@ -30,7 +30,7 @@ type
         #SND_PCM_ACCESS_LAST = SND_PCM_ACCESS_RW_NONINTERLEAVED
 
 
-#Format..Only defining INT16 bit LittleEndian...FOR MORE /usr/include/alsa/pcm.h #123
+#Format..Only defining INT16 bit LittleEndian...FOR MORE ../include/pcm.h #123
 type 
     pcmFormats*{.size: sizeof(cint).} = enum
         SND_PCM_FORMAT_S16_LE = 2'i32

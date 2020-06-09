@@ -1,5 +1,5 @@
 #reading specfied amount of data from standard microphone into an userspace buffer.
-#in blocking-mode...i.e function would wait until specified amount of data is not read.
+#in blocking-mode...i.e function would wait until specified amount of data is read.
 #Can set a bigger kernelBuffer size if non-deterministic main thread Code to prevent buffer overrun.
 
 #Remember sample size depends on the dataformat(like int16) and num_channels..meaning 512 samples size in bytes would be different for different number of channels used.
@@ -11,7 +11,8 @@ const
     rate = 16000'u32
     kernelBuffer = 8192'u32 #KernelBuffer size for storing micData..must not be overrun.
     nChannels = 1'u32
-    format = SND_PCM_FORMAT_S16_LE
+    #for now this format is supported only TO ADD/See available  formats see ../include/pcm.h #123
+    format = SND_PCM_FORMAT_S16_LE   #int16 PCM  LITTLE ENDIAN (recommended)
     mode = BLOCKING_MODE
 var buff :array[512,int16] #userSpace buffer for holding data.
 
