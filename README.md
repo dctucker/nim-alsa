@@ -1,10 +1,10 @@
 # NIM bindings for Alsa-lib C library.
-##  The Alsa-lib itself is a library to interface with ALSA in the Linux kernel and virtual devices using a plugin system.
+###  The Alsa-lib itself is a library to interface with ALSA in the Linux kernel and virtual devices using a plugin system.
 
 ## Installation:
 ```$ nimble install https://gitlab.com/eagledot/nim-alsa```   OR ```nimble install alsa```.
 
-
+_NOTE:  Depends on the ``libasound.so`` which is included with most linux distros_
 ## Usage:
 ```nim
 import alsa
